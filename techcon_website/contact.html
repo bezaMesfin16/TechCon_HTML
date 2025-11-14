@@ -1,10 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us - TechCon 2024</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        .map-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        form {
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 0.5rem;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,43 +47,42 @@
             </ul>
         </nav>
     </header>
-    
+
     <main>
         <section>
-            <h2>Contact Information</h2>
-            <p>Email: <a href="mailto:email@example.com">email@example.com</a></p>
-            <h3>Follow Us:</h3>
+            <h2>Get in Touch</h2>
+            <p>Email us at: <a href="mailto:email@example.com">email@example.com</a></p>
+
+            <h3>Follow Us</h3>
             <ul>
-                <li><a href="https://twitter.com/TechCon" target="_blank">Twitter</a></li>
-                <li><a href="https://facebook.com/TechCon" target="_blank">Facebook</a></li>
-                <li><a href="https://linkedin.com/company/TechCon" target="_blank">LinkedIn</a></li>
+                <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
             </ul>
         </section>
 
         <section>
-            <h2>Location</h2>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.610179000637!2d-122.09542748468164!3d37.41708097982682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f8d1e2dd38ecf%3A0x37d9dbe1ecfdefa8!2sTechCon%20Center!5e0!3m2!1sen!2sus!4v1234567890" 
-                width="600" 
-                height="450" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
+            <h2>Our Location</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.95373531531584!3d-37.81627974202101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577b1b3c2de3d89!2sTechCon%20Venue!5e0!3m2!1sen!2sus!4v1700000000000"></iframe>
+            </div>
         </section>
 
         <section>
-            <h2>Contact Us</h2>
-            <form action="#" method="post">
-                <label for="contactName">Name:</label>
-                <input type="text" id="contactName" name="contactName" required>
-                
-                <label for="contactEmail">Email:</label>
-                <input type="email" id="contactEmail" name="contactEmail" required>
-                
-                <label for="contactMessage">Message:</label>
-                <textarea id="contactMessage" name="contactMessage" required></textarea>
-                
+            <h2>Contact Us Form</h2>
+            <form>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required />
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
                 <button type="submit">Send Message</button>
             </form>
         </section>
